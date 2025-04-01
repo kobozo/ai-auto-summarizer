@@ -5,7 +5,7 @@ alwaysApply: false
 ---
 
 Key requirements:
-1. All source code lives under `src/project_name`
+1. All source code lives under `src/ai_auto_summarizer`
 2. Tests mirror source structure in `tests/` directory
 3. Poetry manages dependencies in `pyproject.toml`
 4. Pytest configuration in root `pytest.ini`
@@ -15,5 +15,5 @@ Key requirements:
 Tests must:
 - Be placed in `tests/` directory
 - Follow `test_*.py` naming convention
-- An example of an import from the source code: `from project_name.main import demo_function`
+- An example of an import from the source code: `from ai_auto_summarizer.main import demo_function`
 - Use pytest framework with coverage

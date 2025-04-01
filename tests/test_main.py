@@ -2,12 +2,12 @@
 
 from unittest.mock import patch
 
-from project_name.main import demo_function
+from ai_auto_summarizer.main import demo_function
 
 
 def test_demo_function():
     """Test that demo_function returns the value from settings.the_var."""
-    with patch("project_name.main.settings") as mock_settings:
+    with patch("ai_auto_summarizer.main.settings") as mock_settings:
         # Set up the mock
         mock_settings.the_var = "test_value"
 

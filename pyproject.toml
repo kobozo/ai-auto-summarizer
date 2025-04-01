@@ -1,5 +1,5 @@
 [project]
-name = "project-name"
+name = "ai-auto-summarizer"
 description = ""
 readme = "README.md"
 authors = [
@@ -14,7 +14,7 @@ dependencies = [
 
 [tool.poetry]
 version = "1.0.2"
-packages = [{include = "project_name", from = "src"}]
+packages = [{include = "ai_auto_summarizer", from = "src"}]
 
 [tool.poetry.requires-plugins]
 poetry-plugin-export = ">=1.8"
@@ -59,7 +59,7 @@ addopts = """
 --cov-report html:tests/reports/coverage-html \
 --cov-report xml:tests/reports/coverage.xml \
 --ignore=docs/ \
---cov=project_name \
+--cov=ai_auto_summarizer \
 --cov-report=term-missing \
 --cov-fail-under=90
 """
