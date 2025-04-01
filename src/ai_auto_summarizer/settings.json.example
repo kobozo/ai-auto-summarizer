@@ -1,0 +1,40 @@
+{
+  "sources": {
+    "youtube": [
+      {
+        "id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+        "name": "Google Developers",
+        "type": "channel",
+        "last_checked": null,
+        "enabled": true,
+        "time_period": "7d"
+      },
+      {
+        "id": "@mreflow",
+        "name": "Mr. Eflow",
+        "type": "user",
+        "last_checked": null,
+        "enabled": true,
+        "time_period": "14d"
+      }
+    ]
+  },
+  "api_keys": {
+    "youtube": "YOUR_YOUTUBE_API_KEY",
+    "openai": "YOUR_OPENAI_API_KEY"
+  },
+  "storage": {
+    "base_directory": "~/ai_auto_summarizer_data"
+  },
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "max_length": 500
+  },
+  "categories": {
+    "AI": "Artificial intelligence systems, machine learning models, and neural networks",
+    "machine learning": "Machine learning algorithms, techniques, and applications",
+    "new tools": "Recently released software tools, libraries, frameworks, and technologies",
+    "technology": "General technology trends, hardware innovations, and technical advancements"
+  }
+} 

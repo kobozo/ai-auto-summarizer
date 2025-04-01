@@ -19,6 +19,7 @@ help:
 	@echo "  pre-commit  run pre-commit checks on all files"
 	@echo "  lint        run the code linters"
 	@echo "  test        run all the tests"
+	@echo "  run         run the application"
 	@echo "  all         install, lint, and test the project"
 	@echo "  clean       remove all temporary files listed in .gitignore"
 	@echo ""
@@ -45,6 +46,10 @@ lint: $(INSTALL_STAMP)
 test: $(INSTALL_STAMP)
     # Configured in pyproject.toml
 	$(POETRY) run pytest
+
+.PHONY: run
+run: $(INSTALL_STAMP)
+	$(POETRY) run python -m $(PYMODULE)
 
 .PHONY: clean
 clean:
