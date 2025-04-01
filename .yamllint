@@ -1,0 +1,8 @@
+---
+extends: default
+rules:
+  line-length: disable  # Example of disabling a rule if needed
+  document-start: disable
+  key-ordering: disable
+  # Additional rules you want to adjust
+ignored-patterns: ['!reference']

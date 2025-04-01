@@ -1,0 +1,48 @@
+---
+default_language_version:
+  python: python3.13
+repos:
+  - repo: https://gitlab.com/vojko.pribudic.foss/pre-commit-update
+    rev: v0.6.1
+    hooks:
+      - id: pre-commit-update
+  - repo: https://github.com/python-poetry/poetry
+    rev: 2.1.1  # add version here
+    hooks:
+      - id: poetry-check
+      - id: poetry-lock
+      - id: poetry-install
+  - repo: https://github.com/python-poetry/poetry-plugin-export
+    rev: 1.9.0
+    hooks:
+      - id: poetry-export
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-json
+      - id: check-added-large-files
+  - repo: https://github.com/lyz-code/yamlfix
+    rev: 1.17.0
+    hooks:
+      - id: yamlfix
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        args: [--config-file, .yamllint]
+  - repo: local
+    hooks:
+      - id: ruff
+        name: run ruff tests
+        language: system
+        pass_filenames: false
+        entry: poetry run ruff check . --fix
+      - id: unittest
+        name: run unit tests
+        language: system
+        pass_filenames: false
+        entry: poetry run tox
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.0
+    hooks:
+      - id: gitleaks

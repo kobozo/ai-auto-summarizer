@@ -1,0 +1,9 @@
+[allowlist]
+description = "Allow test secret in API endpoint tests"
+files = [
+    '''tests/test_api_endpoints\.py''',
+]
+
+regexes = [
+    '''4pcd0ZVU0I02JCrs8xcGNnCGsFsXbLIIPCRWzj5yyhE\='''
+] 
